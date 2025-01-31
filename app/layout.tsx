@@ -16,26 +16,26 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Emmanuel Kipkurui Ronoh - Portfolio",
-    template: "%s | Emmanuel Kipkurui Ronoh",
+    default: "Emmanuel  Ronoh | Portfolio",
+    template: "%s | Emmanuel  Ronoh",
   },
-  description: "Network and IT professional portfolio of Emmanuel Kipkurui Ronoh",
+  description: "Network and IT professional portfolio of Emmanuel  Ronoh",
   keywords: ["Network", "IT", "Cloud Computing", "Cybersecurity", "AWS", "CCNA"],
-  authors: [{ name: "Emmanuel Kipkurui Ronoh" }],
-  creator: "Emmanuel Kipkurui Ronoh",
+  authors: [{ name: "Emmanuel  Ronoh" }],
+  creator: "Emmanuel  Ronoh",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://www.emmanuelronoh.com",
-    title: "Emmanuel Kipkurui Ronoh - Portfolio",
-    description: "Network and IT professional portfolio of Emmanuel Kipkurui Ronoh",
-    siteName: "Emmanuel Kipkurui Ronoh Portfolio",
+    url: "https://my-portolio-livid.vercel.app/",
+    title: "Emmanuel  Ronoh | Portfolio",
+    description: "Network and IT professional portfolio of Emmanuel  Ronoh",
+    siteName: "Emmanuel  Ronoh Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Emmanuel Kipkurui Ronoh - Portfolio",
-    description: "Network and IT professional portfolio of Emmanuel Kipkurui Ronoh",
-    creator: "@emmanuelronoh",
+    title: "Emmanuel  Ronoh - Portfolio",
+    description: "Network and IT professional portfolio of Emmanuel  Ronoh",
+    creator: "@_wiz001",
   },
 }
 
