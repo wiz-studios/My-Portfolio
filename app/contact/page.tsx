@@ -112,11 +112,12 @@ export default function Contact() {
                  
               <div className="space-y-4">
                 <div className="flex items-center space-x-4">
-                  <input
-                    type="email"
-                    placeholder="your.email@example.com"
-                    className="px-4 py-2 rounded-md border border-muted-foreground w-full"
-                  />
+                <input
+  type="email"
+  placeholder="your.email@example.com"
+  className="px-4 py-2 rounded-md border border-gray-300 w-full focus:ring focus:ring-blue-500 focus:border-blue-500"
+/>
+
                 </div>
                 <div className="flex justify-center">
                   <button
