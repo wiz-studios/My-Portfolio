@@ -24,6 +24,11 @@ export default function Home() {
                 Connect
               </Link>
             </Button>
+            <Button asChild variant="secondary" size="lg">
+              <a href="/resume.pdf" download>
+                Download Resume
+              </a>
+            </Button>
           </div>
           <div className="flex space-x-4">
             <Link href="https://github.com/EmmanuelKipkurui" target="_blank" rel="noopener noreferrer">
@@ -54,7 +59,6 @@ export default function Home() {
               width={256}
               height={256}
               className="rounded-full border-4 border-primary shadow-2xl"
-              
               loading="lazy"
             />
           </Suspense>
