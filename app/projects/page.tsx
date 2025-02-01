@@ -13,7 +13,7 @@ const projects = [
     title: "Password Generator",
     description:
       "Developed a Password Generator web application using Next.js, React, and Tailwind CSS, enabling users to create secure, customizable passwords and improving user experience with a responsive, intuitive interface.",
-    link: "https://password-generator-mu-three-60.vercel.app/",
+    link: "https://password-generator-14.vercel.app/",
   },
   {
     title: "Web-Based Inventory Management System",
@@ -49,7 +49,7 @@ export default function Projects() {
             <CardContent className="space-y-4">
               <p className="text-muted-foreground">{project.description}</p>
               <Button asChild variant="outline">
-                {project.link === "https://password-generator-mu-three-60.vercel.app/" ? (
+                {project.link === "https://password-generator-14.vercel.app/" ? (
                   <a href={project.link} target="_blank" rel="noopener noreferrer">Learn More</a>
                 ) : (
                   <Link href={project.link}>Learn More</Link>
