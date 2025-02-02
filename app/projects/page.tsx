@@ -21,10 +21,10 @@ const projects = [
     link: "#",
   },
   {
-    title: "E-Commerce Website",
+    title: "Hoodie Hub",
     description:
-      "Designed and developed a fully responsive e-commerce website using React and Tailwind CSS, increasing mobile traffic by 30%.",
-    link: "#",
+      "Hoodie Hub is a modern e-commerce platform for hoodie lovers, offering a seamless shopping experience with customization options. Built with a sleek and responsive design, it ensures smooth navigation and secure transactions.",
+    link: "https://hoodie-hub.vercel.app/",
   },
   {
     title: "Task Management App",
@@ -49,7 +49,7 @@ export default function Projects() {
             <CardContent className="space-y-4">
               <p className="text-muted-foreground">{project.description}</p>
               <Button asChild variant="outline">
-                {project.link === "https://password-generator-14.vercel.app/" ? (
+                {project.link.startsWith("https") ? (
                   <a href={project.link} target="_blank" rel="noopener noreferrer">Learn More</a>
                 ) : (
                   <Link href={project.link}>Learn More</Link>
