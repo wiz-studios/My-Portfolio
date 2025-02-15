@@ -16,9 +16,9 @@ const projects = [
     link: "https://password-generator-14.vercel.app/",
   },
   {
-    title: "Web-Based Inventory Management System",
+    title: "Web-Based Rental Management System",
     description: "Designed a secure, scalable system with MySQL and optimized database performance by 30%.",
-    link: "#",
+    link: "https://benevolent-cheesecake-415781.netlify.app/",
   },
   {
     title: "Hoodie Hub",
