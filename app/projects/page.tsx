@@ -5,7 +5,7 @@ import Link from "next/link"
 
 export const metadata = {
   title: "Projects",
-  description: "Discover the projects Emmanuel Kipkurui Ronoh has worked on in networking and IT.",
+  description: "Discover the projects Emmanuel  Ronoh has worked on in networking and IT.",
 }
 
 const projects = [
@@ -52,7 +52,7 @@ export default function Projects() {
                 {project.link.startsWith("https") ? (
                   <a href={project.link} target="_blank" rel="noopener noreferrer">Learn More</a>
                 ) : (
-                  <Link href={project.link}>Learn More</Link>
+                  <Link href={project.link}>View Live Site</Link>
                 )}
               </Button>
             </CardContent>
