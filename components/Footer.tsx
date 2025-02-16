@@ -62,7 +62,7 @@ const Footer = () => {
               <h3 className="text-lg font-semibold">Contact Us</h3>
               <div className="flex space-x-4">
                 <Button variant="ghost" size="icon" asChild>
-                  <a href="https://github.com/EmmanuelKipkurui" target="_blank" rel="noopener noreferrer">
+                  <a href="https://github.com/wiz-studios" target="_blank" rel="noopener noreferrer">
                     <GitHub className="h-5 w-5" />
                     <span className="sr-only">GitHub</span>
                   </a>
