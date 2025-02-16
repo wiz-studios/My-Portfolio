@@ -27,8 +27,8 @@ const projects = [
     link: "https://hoodie-hub.vercel.app/",
   },
   {
-    title: "Task Management App",
-    description: "Developed the frontend of a task management app using Vue.js, incorporating drag-and-drop functionality and real-time updates.",
+    title: "Sudoku Web App",
+    description: "This is a web-based Sudoku game with enhanced features, including a solver, difficulty levels, a turn-based multiplayer mode, and customization options. The project is built using React with Tailwind CSS for styling and MongoDB for storing game data and player rankings. The UI follows a minimal design, ensuring a clean and engaging user experience.",
     link: "#",
   },
 ]
