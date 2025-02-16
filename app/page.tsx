@@ -40,7 +40,7 @@ export default function Home() {
             </Button>
           </div>
           <div className="flex space-x-4">
-            <Link href="https://github.com/EmmanuelKipkurui" target="_blank" rel="noopener noreferrer">
+            <Link href="https://github.com/wiz-studios" target="_blank" rel="noopener noreferrer">
               <Button variant="ghost" size="icon">
                 <GitHub className="h-5 w-5" />
                 <span className="sr-only">GitHub</span>
@@ -106,7 +106,7 @@ export default function Home() {
           <CardContent className="p-4 md:p-6">
             <h3 className="text-lg font-semibold mb-2">Database Management</h3>
             <p className="text-muted-foreground">
-              Experienced in MySQL for efficient data storage and retrieval.
+              Experienced in MySQL,PostgreSQL and MongoDB for efficient data storage and retrieval.
             </p>
           </CardContent>
         </Card>
