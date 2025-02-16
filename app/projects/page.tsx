@@ -50,7 +50,7 @@ export default function Projects() {
               <p className="text-muted-foreground">{project.description}</p>
               <Button asChild variant="outline">
                 {project.link.startsWith("https") ? (
-                  <a href={project.link} target="_blank" rel="noopener noreferrer">Learn More</a>
+                  <a href={project.link} target="_blank" rel="noopener noreferrer">View Live Site</a>
                 ) : (
                   <Link href={project.link}>View Live Site</Link>
                 )}
