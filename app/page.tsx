@@ -29,6 +29,15 @@ export default function Home() {
                 Download Resume
               </a>
             </Button>
+            <Button asChild size="lg" className="bg-green-500 hover:bg-green-600 text-white shadow-lg">
+              <a
+                href="https://wa.me/254719267759?text=Hi%20Wiz%20Dev,%20I%20am%20interested%20in%20your%20services"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Hire Me
+              </a>
+            </Button>
           </div>
           <div className="flex space-x-4">
             <Link href="https://github.com/EmmanuelKipkurui" target="_blank" rel="noopener noreferrer">
