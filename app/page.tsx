@@ -16,20 +16,20 @@ export default function Home() {
             description="Web Developer and UI/UX Enthusiast passionate about creating innovative digital experiences that drive business success."
           />
           <div className="flex flex-wrap gap-4">
-            <Button asChild size="lg" className="bg-primary hover:bg-primary/90 shadow-lg">
+            <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white shadow-lg">
               <Link href="/about">Learn More</Link>
             </Button>
-            <Button asChild variant="outline" size="lg">
+            <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white shadow-lg">
               <Link href="/contact" rel="noopener noreferrer">
                 Connect
               </Link>
             </Button>
-            <Button asChild variant="secondary" size="lg">
+            <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white shadow-lg">
               <a href="/resume.pdf" download>
                 Download Resume
               </a>
             </Button>
-            <Button asChild size="lg" className="bg-green-500 hover:bg-green-600 text-white shadow-lg">
+            <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white shadow-lg">
               <a
                 href="https://wa.me/254719267759?text=Hi%20Wiz%20Dev,%20I%20am%20interested%20in%20your%20services"
                 target="_blank"
