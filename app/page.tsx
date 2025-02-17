@@ -16,20 +16,38 @@ export default function Home() {
             description="Web Developer and UI/UX Enthusiast passionate about creating innovative digital experiences that drive business success."
           />
           <div className="flex flex-wrap gap-4">
-            <Button asChild size="lg" className="bg-primary hover:bg-primary/90 shadow-lg">
+            <Button
+              asChild
+              size="lg"
+              className="bg-primary hover:bg-primary/90 text-white shadow-lg rounded-lg"
+            >
               <Link href="/about">Learn More</Link>
             </Button>
-            <Button asChild variant="outline" size="lg">
+            <Button
+              asChild
+              variant="outline"
+              size="lg"
+              className="border-primary text-primary hover:bg-primary/10 shadow-lg rounded-lg"
+            >
               <Link href="/contact" rel="noopener noreferrer">
                 Connect
               </Link>
             </Button>
-            <Button asChild variant="secondary" size="lg">
+            <Button
+              asChild
+              variant="secondary"
+              size="lg"
+              className="bg-primary text-white hover:bg-primary/90 shadow-lg rounded-lg"
+            >
               <a href="/resume.pdf" download>
                 Download Resume
               </a>
             </Button>
-            <Button asChild size="lg" className="bg-green-500 hover:bg-green-600 text-white shadow-lg">
+            <Button
+              asChild
+              size="lg"
+              className="bg-green-500 hover:bg-green-600 text-white shadow-lg rounded-lg"
+            >
               <a
                 href="https://wa.me/254719267759?text=Hi%20Wiz%20Dev,%20I%20am%20interested%20in%20your%20services"
                 target="_blank"
@@ -106,7 +124,7 @@ export default function Home() {
           <CardContent className="p-4 md:p-6">
             <h3 className="text-lg font-semibold mb-2">Database Management</h3>
             <p className="text-muted-foreground">
-              Experienced in MySQL,PostgreSQL and MongoDB for efficient data storage and retrieval.
+              Experienced in MySQL, PostgreSQL and MongoDB for efficient data storage and retrieval.
             </p>
           </CardContent>
         </Card>
