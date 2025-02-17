@@ -16,24 +16,7 @@ export default function Home() {
             description="Web Developer and UI/UX Enthusiast passionate about creating innovative digital experiences that drive business success."
           />
           <div className="flex flex-wrap gap-4">
-            {/* Identical button styles applied */}
-            <Button
-              asChild
-              size="lg"
-              className="bg-primary hover:bg-primary/90 text-white shadow-lg rounded-lg"
-            >
-              <Link href="/about">Learn More</Link>
-            </Button>
-            <Button
-              asChild
-              variant="outline"
-              size="lg"
-              className="bg-primary text-white border-primary hover:bg-primary/90 shadow-lg rounded-lg"
-            >
-              <Link href="/contact" rel="noopener noreferrer">
-                Connect
-              </Link>
-            </Button>
+            {/* Removed 'Learn More' and 'Connect' buttons */}
             <Button
               asChild
               variant="secondary"
