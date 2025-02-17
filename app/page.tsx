@@ -16,6 +16,7 @@ export default function Home() {
             description="Web Developer and UI/UX Enthusiast passionate about creating innovative digital experiences that drive business success."
           />
           <div className="flex flex-wrap gap-4">
+            {/* Identical button styles applied */}
             <Button
               asChild
               size="lg"
@@ -27,7 +28,7 @@ export default function Home() {
               asChild
               variant="outline"
               size="lg"
-              className="border-primary text-primary hover:bg-primary/10 shadow-lg rounded-lg"
+              className="bg-primary text-white border-primary hover:bg-primary/90 shadow-lg rounded-lg"
             >
               <Link href="/contact" rel="noopener noreferrer">
                 Connect
