@@ -109,7 +109,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="border-t py-6 text-center text-sm text-muted-foreground">
-          <p>&copy; {currentYear} Emmanuel Ronoh. All rights reserved.</p>
+          <p>&copy; {currentYear} Wiz Dev Studios. All rights reserved.</p>
         </div>
       </div>
     </footer>
