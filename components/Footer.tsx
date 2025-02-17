@@ -109,8 +109,18 @@ const Footer = () => {
           </div>
         </div>
         <div className="border-t py-6 text-center text-sm text-muted-foreground">
-          <p>&copy; {currentYear} Wiz Dev Studios. All rights reserved.</p>
-        </div>
+<p>
+  &copy; {currentYear}{" "}
+  <a
+    href="https://ronoh-portfolio-14.vercel.app/"
+    target="_blank" // Opens the link in a new tab
+    rel="noopener noreferrer" // Adds security for external links
+    className="text-blue-500 hover:underline" // Optional: Add some styling
+  >
+    Wiz Dev Studios
+  </a>
+  . All rights reserved.
+</p>        </div>
       </div>
     </footer>
   )
