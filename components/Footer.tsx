@@ -8,6 +8,14 @@ const TikTokIcon = () => (
   </svg>
 )
 
+const WeChatIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M4 14a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v1a4 4 0 0 1-4 4H9l-5 3v-4a4 4 0 0 1 0-4v-1Z" />
+    <circle cx="9" cy="12" r="1" />
+    <circle cx="15" cy="12" r="1" />
+  </svg>
+)
+
 const Footer = () => {
   const currentYear = new Date().getFullYear()
 
@@ -19,13 +27,12 @@ const Footer = () => {
             <div className="space-y-4">
               <h3 className="text-lg font-semibold gradient-text">EMMANUEL RONOH</h3>
               <p className="text-sm text-muted-foreground">
-              Network, IT, and Web Development professional passionate about leveraging technology to build dynamic, user-friendly web applications and drive organizational success through innovative digital solutions.
+                Network, IT, and Web Development professional passionate about leveraging technology to build dynamic, user-friendly web applications and drive organizational success through innovative digital solutions.
               </p>
             </div>
             <div className="space-y-4">
               <h3 className="text-lg font-semibold">Quick Links</h3>
               <nav className="space-y-2">
-                {/* First Group */}
                 <div className="flex space-x-4">
                   <Link href="/" className="flex items-center space-x-1 text-sm text-muted-foreground hover:text-primary transition-colors">
                     <Home className="h-4 w-4" />
@@ -41,7 +48,6 @@ const Footer = () => {
                   </Link>
                 </div>
 
-                {/* Second Group */}
                 <div className="flex space-x-4">
                   <Link href="/projects" className="flex items-center space-x-1 text-sm text-muted-foreground hover:text-primary transition-colors">
                     <Folder className="h-4 w-4" />
@@ -102,6 +108,13 @@ const Footer = () => {
                 </a>
               </Button>
 
+              <Button variant="ghost" size="icon" asChild>
+                <a href="weixin://dl/chat?Tyrell05">
+                  <WeChatIcon />
+                  <span className="sr-only">WeChat</span>
+                </a>
+              </Button>
+
               <p className="text-sm text-muted-foreground">
                 Feel free to reach out for collaborations or opportunities.
               </p>
@@ -109,18 +122,19 @@ const Footer = () => {
           </div>
         </div>
         <div className="border-t py-6 text-center text-sm text-muted-foreground">
-<p>
-  &copy; {currentYear}{" "}
-  <a
-    href="https://ronoh-portfolio-14.vercel.app/"
-    target="_blank" // Opens the link in a new tab
-    rel="noopener noreferrer" // Adds security for external links
-    className="text-blue-500 hover:underline" // Optional: Add some styling
-  >
-    Wiz Dev Studios
-  </a>
-  . All rights reserved.
-</p>        </div>
+          <p>
+            &copy; {currentYear}{" "}
+            <a
+              href="https://ronoh-portfolio-14.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 hover:underline"
+            >
+              Wiz Dev Studios
+            </a>
+            . All rights reserved.
+          </p>
+        </div>
       </div>
     </footer>
   )
