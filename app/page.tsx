@@ -39,7 +39,7 @@ export default function Home() {
             <Button
               asChild
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-white shadow-lg rounded-lg"
+              className="glow-button text-white shadow-lg rounded-lg hover:bg-primary/90 transition-all duration-300"
             >
               <a
                 href="https://wa.me/254719267759?text=Hi%20Wiz%20Dev,%20I%20am%20interested%20in%20your%20services"
