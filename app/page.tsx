@@ -32,7 +32,7 @@ export default function Home() {
               size="lg"
               className="bg-primary text-white hover:bg-primary/90 shadow-lg rounded-lg"
             >
-              <a href="/resume.pdf" download>
+              <a href="/Mr_Ronoh_Resume.pdf" download>
                 Download Resume
               </a>
             </Button>
