@@ -27,9 +27,9 @@ const projects = [
     link: "https://hoodie-hub.vercel.app/",
   },
   {
-    title: "Sudoku Web App",
-    description: "This is a web-based Sudoku game with enhanced features, including a solver, difficulty levels, a turn-based multiplayer mode, and customization options. The project is built using React with Tailwind CSS for styling and MongoDB for storing game data and player rankings. The UI follows a minimal design, ensuring a clean and engaging user experience.",
-    link: "#",
+    title: "To Do App",
+    description: "This To-Do app allows users to create, manage, and organize tasks with features like due dates, priority levels, recurring options, notes, and file attachments. It includes drag-and-drop reordering, reminders via browser notifications, and undo/redo functionality, while also supporting dark mode and responsive design for a seamless experience across devices. Tasks are automatically saved to local storage, ensuring data persistence.",
+    link: "https://to-do-app-14.vercel.app/",
   },
 ]
 
