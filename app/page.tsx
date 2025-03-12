@@ -1,4 +1,5 @@
 "use client";
+import { useState, useEffect } from "react";
 import { Suspense } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -15,6 +16,30 @@ const fadeUpVariants = {
 };
 
 export default function Home() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  // Show button when page is scrolled down
+  const toggleVisibility = () => {
+    if (window.scrollY > 300) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
+
+  // Scroll to top function
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", toggleVisibility);
+    return () => window.removeEventListener("scroll", toggleVisibility);
+  }, []);
+
   return (
     <motion.div initial="hidden" animate="visible" className="container mx-auto px-4 py-8">
       {/* Header Section */}
@@ -118,6 +143,24 @@ export default function Home() {
           </motion.div>
         ))}
       </motion.div>
+      {/* Scroll to Top Button */}
+      {isVisible && (
+        <Button
+          onClick={scrollToTop}
+          className="fixed bottom-4 right-4 bg-primary text-white hover:bg-primary/90 shadow-lg rounded-full p-3"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="w-6 h-6"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+          </svg>
+        </Button>
+      )}
     </motion.div>
   );
 }
