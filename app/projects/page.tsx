@@ -13,14 +13,14 @@ const projects = [
     title: "Password Generator",
     description:
       "Developed a Password Generator web application using Next.js, React, and Tailwind CSS, enabling users to create secure, customizable passwords and improving user experience with a responsive, intuitive interface.",
-    link: "https://kenya-accountability-tracker.vercel.app/",
+    link: "https://password-generator-14.vercel.app/",
   },
 
   {
     title: "Kenya Accountability Tracker",
     description:
       "Developed a web application to track stalled and abandoned projects in Kenya.",
-    link: "https://password-generator-14.vercel.app/",
+    link: "https://kenya-accountability-tracker.vercel.app/",
   },
   
   {
