@@ -22,7 +22,7 @@ export async function POST(request: Request) {
 
     const mailOptions = {
       from: process.env.EMAIL_FROM,
-      to: "kipkuruironoh254@gmail.com",
+      to: "wiz.dev.studios@gmail.com",
       subject: `New message from ${name}`,
       text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
       html: `

@@ -32,18 +32,23 @@ export default function Header() {
   ]
 
   return (
-    <header className="bg-background/80 backdrop-blur-sm sticky top-0 z-50 border-b border-border/40">
+    <header className="bg-background/70 backdrop-blur-md sticky top-0 z-50 border-b border-border/50">
       <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href="/" className="text-2xl font-bold gradient-text">
-            ER
+          <Link href="/" className="font-display text-xl tracking-tight text-foreground">
+            Emmanuel <span className="text-primary">Ronoh</span>
           </Link>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex space-x-1">
+          <div className="hidden md:flex items-center space-x-1">
             {navLinks.map(({ href, label }) => (
-              <Button key={href} variant="ghost" asChild>
+              <Button
+                key={href}
+                variant="ghost"
+                className="text-sm text-foreground/70 hover:text-foreground"
+                asChild
+              >
                 <Link href={href}>{label}</Link>
               </Button>
             ))}
@@ -55,7 +60,7 @@ export default function Header() {
               <Menu className="h-6 w-6" />
             </Button>
             <ModeToggle />
-            <Button asChild className="hidden md:inline-flex">
+            <Button asChild className="hidden md:inline-flex glow-button">
               <Link href="/contact" rel="noopener noreferrer">
                 Contact
               </Link>
@@ -79,7 +84,7 @@ export default function Header() {
 
             {/* Sidebar */}
             <motion.aside
-              className="fixed top-0 left-0 h-full w-4/5 md:w-64 bg-background shadow-xl z-50 p-6 flex flex-col"
+              className="fixed top-0 left-0 h-full w-4/5 md:w-72 bg-background/95 shadow-xl z-50 p-6 flex flex-col border-r border-border/60"
               initial={{ x: "-100%" }}
               animate={{ x: 0 }}
               exit={{ x: "-100%" }}

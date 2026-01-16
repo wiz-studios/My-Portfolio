@@ -9,7 +9,7 @@ const schema = z.object({
   message: z.string().min(1, "Message is required"),
 })
 
-const YOUR_EMAIL = "kipkuruironoh254@gmail.com"
+const YOUR_EMAIL = "wiz.dev.studios@gmail.com"
 
 export async function sendMessage(data: z.infer<typeof schema>) {
   const result = schema.safeParse(data)

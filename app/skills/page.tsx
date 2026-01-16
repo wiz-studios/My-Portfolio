@@ -1,20 +1,20 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent } from "@/components/ui/card"
 import { PageHeader } from "@/components/PageHeader"
 import { Skills } from "@/components/Skills"
 
 export const metadata = {
-  title: "Skills & Certifications",
-  description: "Explore Emmanuel Kipkurui Ronoh's technical skills and professional certifications.",
+  title: "Skills and Certifications",
+  description: "Explore Emmanuel Ronoh's technical skills and professional certifications.",
 }
 
 const skillsData = [
   {
     category: "Frontend Development",
-    skills: ["HTML", "CSS", "JavaScript", "React", "Vue.js", " Bootstrap", "Tailwind CSS"],
+    skills: ["HTML", "CSS", "JavaScript", "React", "Vue.js", "Bootstrap", "Tailwind CSS"],
   },
   {
     category: "UI/UX Design",
-    skills: ["Figma", "Adobe XD", "Wireframing" ,"Prototyping"],
+    skills: ["Figma", "Adobe XD", "Wireframing", "Prototyping"],
   },
   {
     category: "Backend Integration",
@@ -26,46 +26,42 @@ const skillsData = [
   },
   {
     category: "Other Skills",
-    skills: ["Responsive Design", "GitHub", "Cross-Browser Compatibility", "Web Performance Optimization"],
+    skills: ["Responsive Design", "Cross-Browser Compatibility", "Web Performance Optimization"],
   },
 ]
 
 const certifications = [
- "CCNA R&S: Introduction to Networks (Cisco Networking Academy, 2018).",
-  "NDG Linux Essentials: Cisco Networking Academy, 2019.",
-  "Google IT Support Professional Certificate: 2023.",
-  "AWS Cloud Practitioner Essentials: 2023.",
-  "Introduction to Cybersecurity: Cisco Networking Academy, 2025."
+  "CCNA R&S: Introduction to Networks (Cisco Networking Academy, 2018)",
+  "NDG Linux Essentials (Cisco Networking Academy, 2019)",
+  "Google IT Support Professional Certificate (2023)",
+  "AWS Cloud Practitioner Essentials (2023)",
+  "Introduction to Cybersecurity (Cisco Networking Academy, 2025)",
 ]
 
 export default function SkillsPage() {
   return (
-    <div className="section-container">
+    <div className="section-container space-y-10">
       <PageHeader
-        title="Skills & Certifications"
-        description="My technical expertise and professional qualifications"
+        title="Skills and Certifications"
+        description="A snapshot of my technical strengths and professional training."
       />
-      <div className="mt-8 space-y-8">
-        <Card className="card-hover">
-          <CardHeader>
-            <CardTitle className="text-2xl gradient-text">Technical Skills</CardTitle>
-          </CardHeader>
-          <CardContent>
+      <div className="grid gap-8 md:grid-cols-2">
+        <Card className="surface-card">
+          <CardContent className="p-6 space-y-6">
+            <h2 className="font-display text-2xl">Technical Skills</h2>
             <div className="space-y-6">
-              {skillsData.map((skillSet, index) => (
-                <Skills key={index} title={skillSet.category} skills={skillSet.skills} />
+              {skillsData.map((skillSet) => (
+                <Skills key={skillSet.category} title={skillSet.category} skills={skillSet.skills} />
               ))}
             </div>
           </CardContent>
         </Card>
-        <Card className="card-hover">
-          <CardHeader>
-            <CardTitle className="text-2xl gradient-text">Certifications</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <ul className="list-disc pl-6 space-y-2">
-              {certifications.map((cert, index) => (
-                <li key={index}>{cert}</li>
+        <Card className="surface-card">
+          <CardContent className="p-6 space-y-6">
+            <h2 className="font-display text-2xl">Certifications</h2>
+            <ul className="space-y-3 text-sm text-muted-foreground">
+              {certifications.map((cert) => (
+                <li key={cert}>{cert}</li>
               ))}
             </ul>
           </CardContent>
@@ -74,4 +70,3 @@ export default function SkillsPage() {
     </div>
   )
 }
-

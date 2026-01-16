@@ -1,81 +1,136 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent } from "@/components/ui/card"
 import { PageHeader } from "@/components/PageHeader"
-import { GraduationCap, Award, User } from "lucide-react"
+import { Award, Compass, GraduationCap, User } from "lucide-react"
 
 export const metadata = {
   title: "About Me",
-  description: "Learn more about Emmanuel Ronoh and his educational background.",
+  description: "Learn more about Emmanuel Ronoh and his background.",
 }
+
+const highlights = [
+  {
+    title: "Design to build",
+    description:
+      "I translate ideas into clear UI systems and build them with clean, responsive code.",
+    icon: Compass,
+  },
+  {
+    title: "Reliable delivery",
+    description:
+      "I focus on speed, accessibility, and polished UX for real-world products.",
+    icon: User,
+  },
+]
+
+const education = [
+  {
+    title: "Bachelor of Science in Information Technology",
+    school: "Dedan Kimathi University of Technology",
+    period: "2017-2021",
+  },
+  {
+    title: "KCSE Certificate",
+    school: "Kericho High School",
+    period: "2013-2016",
+    detail: "Grade: B (Plain)",
+  },
+  {
+    title: "KCPE Certificate",
+    school: "Chebigen Primary School",
+    period: "2005-2012",
+    detail: "Marks: 365",
+  },
+]
+
+const certifications = [
+  "CCNA R&S: Introduction to Networks (Cisco Networking Academy, 2018)",
+  "NDG Linux Essentials (Cisco Networking Academy, 2019)",
+  "Google IT Support Professional Certificate (2023)",
+  "AWS Cloud Practitioner Essentials (2023)",
+  "Introduction to Cybersecurity (Cisco Networking Academy, 2025)",
+]
 
 export default function About() {
   return (
-    <div className="section-container">
-      {/* Page Header */}
+    <div className="section-container space-y-10">
       <PageHeader
         title="About Me"
-        description="Building impactful digital experiences through technology, design, and innovation."
+        description="I build digital experiences that balance usability, performance, and thoughtful design."
       />
 
-      <div className="mt-12 grid gap-10 lg:grid-cols-2">
-        {/* Personal Profile */}
-        <Card className="card-hover col-span-2">
-          <CardHeader className="flex flex-row items-center gap-3">
-            <User className="w-7 h-7 text-primary" />
-            <CardTitle className="text-2xl gradient-text">Personal Profile</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p className="text-lg leading-relaxed text-muted-foreground">
-              I am a <span className="font-semibold text-foreground">creative and detail-oriented Web Designer</span> 
-              specializing in <span className="font-medium">frontend development, UI/UX design</span>, and 
-              responsive web applications. With strong skills in <span className="font-medium">HTML, CSS, JavaScript, React, 
-              and Vue.js</span>, I bring ideas to life with clean code and seamless design.
-            </p>
-            <p className="text-lg leading-relaxed text-muted-foreground mt-4">
-              My expertise extends to <span className="font-medium">RESTful APIs, MySQL, and cloud platforms</span>, 
-              enabling me to deliver <span className="font-medium">scalable, secure, and efficient</span> web solutions. 
-              From <span className="italic">e-commerce platforms</span> to <span className="italic">task management apps</span>, 
-              I design with a focus on <span className="font-medium">accessibility, performance, and user delight</span>.
-            </p>
+      <div className="grid gap-8 lg:grid-cols-2">
+        <Card className="surface-card lg:col-span-2">
+          <CardContent className="p-6 space-y-6">
+            <div className="flex items-center gap-3">
+              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-secondary/60 text-foreground">
+                <User className="h-6 w-6" />
+              </div>
+              <h2 className="font-display text-2xl">Personal Profile</h2>
+            </div>
+            <div className="space-y-4 text-muted-foreground">
+              <p className="text-lg leading-relaxed">
+                I am a creative and detail-oriented web designer specializing in frontend development,
+                UI/UX design, and responsive web applications. With strong skills in HTML, CSS,
+                JavaScript, React, and Vue.js, I bring ideas to life with clean code and seamless
+                design.
+              </p>
+              <p className="text-lg leading-relaxed">
+                My expertise extends to RESTful APIs, MySQL, and cloud platforms, enabling me to
+                deliver scalable, secure, and efficient web solutions. From e-commerce platforms to
+                task management apps, I design with a focus on accessibility, performance, and user
+                delight.
+              </p>
+            </div>
+            <div className="grid gap-4 md:grid-cols-2">
+              {highlights.map((item) => {
+                const Icon = item.icon
+                return (
+                  <div key={item.title} className="surface-outline rounded-2xl p-4">
+                    <div className="flex items-center gap-2">
+                      <Icon className="h-5 w-5 text-primary" />
+                      <p className="text-sm font-semibold text-foreground">{item.title}</p>
+                    </div>
+                    <p className="mt-2 text-sm text-muted-foreground">{item.description}</p>
+                  </div>
+                )
+              })}
+            </div>
           </CardContent>
         </Card>
 
-        {/* Education */}
-        <Card className="card-hover">
-          <CardHeader className="flex flex-row items-center gap-3">
-            <GraduationCap className="w-7 h-7 text-primary" />
-            <CardTitle className="text-2xl gradient-text">Education</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <ul className="space-y-6">
-              <li>
-                <h3 className="text-xl font-semibold text-primary">Bachelor of Science in Information Technology</h3>
-                <p className="text-muted-foreground">Dedan Kimathi University of Technology <br /> (2017–2021)</p>
-              </li>
-              <li>
-                <h3 className="text-xl font-semibold text-primary">KCSE Certificate</h3>
-                <p className="text-muted-foreground">Kericho High School (2013–2016) — <span className="font-medium">Grade: B (Plain)</span></p>
-              </li>
-              <li>
-                <h3 className="text-xl font-semibold text-primary">KCPE Certificate</h3>
-                <p className="text-muted-foreground">Chebigen Primary School (2005–2012) — <span className="font-medium">Marks: 365</span></p>
-              </li>
+        <Card className="surface-card">
+          <CardContent className="p-6 space-y-6">
+            <div className="flex items-center gap-3">
+              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-secondary/60 text-foreground">
+                <GraduationCap className="h-6 w-6" />
+              </div>
+              <h2 className="font-display text-2xl">Education</h2>
+            </div>
+            <ul className="space-y-4 text-muted-foreground">
+              {education.map((item) => (
+                <li key={item.title}>
+                  <p className="text-base font-semibold text-foreground">{item.title}</p>
+                  <p className="text-sm">{item.school}</p>
+                  <p className="text-sm">{item.period}</p>
+                  {item.detail && <p className="text-sm">{item.detail}</p>}
+                </li>
+              ))}
             </ul>
           </CardContent>
         </Card>
 
-        {/* Certifications */}
-        <Card className="card-hover">
-          <CardHeader className="flex flex-row items-center gap-3">
-            <Award className="w-7 h-7 text-primary" />
-            <CardTitle className="text-2xl gradient-text">Certifications</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <ul className="list-disc pl-6 mt-2 space-y-3 text-muted-foreground">
-              <li><b>CCNA R&S:</b> Introduction to Networks (Cisco Networking Academy, 2018)</li>
-              <li><b>NDG Linux Essentials:</b> Cisco Networking Academy, 2019</li>
-              <li><b>Google IT Support Professional Certificate:</b> 2023</li>
-              <li><b>AWS Cloud Practitioner Essentials:</b> 2023</li>
-              <li><b>Introduction to Cybersecurity:</b> Cisco Networking Academy, 2025</li>
+        <Card className="surface-card">
+          <CardContent className="p-6 space-y-6">
+            <div className="flex items-center gap-3">
+              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-secondary/60 text-foreground">
+                <Award className="h-6 w-6" />
+              </div>
+              <h2 className="font-display text-2xl">Certifications</h2>
+            </div>
+            <ul className="space-y-3 text-sm text-muted-foreground">
+              {certifications.map((cert) => (
+                <li key={cert}>{cert}</li>
+              ))}
             </ul>
           </CardContent>
         </Card>

@@ -15,6 +15,13 @@ const nextConfig = {
   },
   images: {
     unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "s0.wp.com",
+        pathname: "/mshots/v1/**",
+      },
+    ],
   },
   experimental: {
     webpackBuildWorker: true,

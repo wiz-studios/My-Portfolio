@@ -2,18 +2,21 @@
 
 import type React from "react";
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/components/ui/use-toast";
 
-// Animation Variants
-const fadeUpVariants = {
+const getFadeUpVariants = (reduceMotion: boolean) => ({
   hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
-};
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: reduceMotion ? 0 : 0.6, ease: "easeOut" },
+  },
+});
 
 export function ContactForm() {
   const [name, setName] = useState("");
@@ -22,6 +25,8 @@ export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const { toast } = useToast();
+  const shouldReduceMotion = useReducedMotion() ?? false;
+  const fadeUpVariants = getFadeUpVariants(shouldReduceMotion);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -40,7 +45,7 @@ export function ContactForm() {
         setIsSuccess(true);
         toast({
           title: "Message sent successfully",
-          description: "Thank you for your message. We'll get back to you soon!",
+          description: "Thank you for your message. I'll get back to you soon!",
           duration: 5000,
         });
 
@@ -68,7 +73,7 @@ export function ContactForm() {
   return (
     <motion.form
       onSubmit={handleSubmit}
-      initial="hidden"
+      initial={shouldReduceMotion ? false : "hidden"}
       animate="visible"
       className="space-y-4"
     >
@@ -81,7 +86,7 @@ export function ContactForm() {
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
-          className="bg-background/50"
+          className="bg-background/60 border-border/70"
         />
       </motion.div>
 
@@ -95,7 +100,7 @@ export function ContactForm() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
-          className="bg-background/50"
+          className="bg-background/60 border-border/70"
         />
       </motion.div>
 
@@ -108,7 +113,7 @@ export function ContactForm() {
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           required
-          className="min-h-[120px] bg-background/50"
+          className="min-h-[120px] bg-background/60 border-border/70"
         />
       </motion.div>
 
@@ -117,7 +122,7 @@ export function ContactForm() {
         <Button
           type="submit"
           className={`w-full transition-all duration-300 ${
-            isSuccess ? "bg-green-500 hover:bg-green-600" : "bg-primary hover:bg-primary/90"
+            isSuccess ? "bg-green-500 hover:bg-green-600" : "glow-button"
           }`}
           disabled={isSubmitting || isSuccess}
         >

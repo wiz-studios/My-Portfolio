@@ -12,54 +12,48 @@ const Footer = () => {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-background border-t">
+    <footer className="bg-background/70 border-t border-border/60">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="py-8 md:py-12">
+        <div className="py-10 md:py-14">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             
             {/* Left Column */}
             <div className="space-y-4">
-              <h3 className="text-lg font-semibold gradient-text">EMMANUEL RONOH</h3>
+              <h3 className="font-display text-xl text-foreground">Emmanuel Ronoh</h3>
               <p className="text-sm text-muted-foreground">
-                Network, IT, and Web Development professional passionate about leveraging technology to build dynamic, user-friendly web applications and drive organizational success through innovative digital solutions.
+                Web developer and UI/UX designer building purposeful, high-performance digital products.
               </p>
+              <p className="text-sm text-muted-foreground">Based in Nairobi, Kenya.</p>
             </div>
             
             {/* Middle Column */}
             <div className="space-y-4">
               <h3 className="text-lg font-semibold">Quick Links</h3>
-              <nav className="space-y-2">
-                {/* First Group */}
-                <div className="flex space-x-4">
-                  <Link href="/" className="flex items-center space-x-1 text-sm text-muted-foreground hover:text-primary transition-colors">
-                    <Home className="h-4 w-4" />
-                    <span>Home</span>
-                  </Link>
-                  <Link href="/about" className="flex items-center space-x-1 text-sm text-muted-foreground hover:text-primary transition-colors">
-                    <User className="h-4 w-4" />
-                    <span>About</span>
-                  </Link>
-                  <Link href="/experience" className="flex items-center space-x-1 text-sm text-muted-foreground hover:text-primary transition-colors">
-                    <Briefcase className="h-4 w-4" />
-                    <span>Experience</span>
-                  </Link>
-                </div>
-
-                {/* Second Group */}
-                <div className="flex space-x-4">
-                  <Link href="/projects" className="flex items-center space-x-1 text-sm text-muted-foreground hover:text-primary transition-colors">
-                    <Folder className="h-4 w-4" />
-                    <span>Projects</span>
-                  </Link>
-                  <Link href="/skills" className="flex items-center space-x-1 text-sm text-muted-foreground hover:text-primary transition-colors">
-                    <Code className="h-4 w-4" />
-                    <span>Skills</span>
-                  </Link>
-                  <Link href="/contact" className="flex items-center space-x-1 text-sm text-muted-foreground hover:text-primary transition-colors">
-                    <Mail className="h-4 w-4" />
-                    <span>Contact Us</span>
-                  </Link>
-                </div>
+              <nav className="grid grid-cols-2 gap-3">
+                <Link href="/" className="flex items-center space-x-2 text-sm text-muted-foreground hover:text-primary transition-colors">
+                  <Home className="h-4 w-4" />
+                  <span>Home</span>
+                </Link>
+                <Link href="/about" className="flex items-center space-x-2 text-sm text-muted-foreground hover:text-primary transition-colors">
+                  <User className="h-4 w-4" />
+                  <span>About</span>
+                </Link>
+                <Link href="/experience" className="flex items-center space-x-2 text-sm text-muted-foreground hover:text-primary transition-colors">
+                  <Briefcase className="h-4 w-4" />
+                  <span>Experience</span>
+                </Link>
+                <Link href="/projects" className="flex items-center space-x-2 text-sm text-muted-foreground hover:text-primary transition-colors">
+                  <Folder className="h-4 w-4" />
+                  <span>Projects</span>
+                </Link>
+                <Link href="/skills" className="flex items-center space-x-2 text-sm text-muted-foreground hover:text-primary transition-colors">
+                  <Code className="h-4 w-4" />
+                  <span>Skills</span>
+                </Link>
+                <Link href="/contact" className="flex items-center space-x-2 text-sm text-muted-foreground hover:text-primary transition-colors">
+                  <Mail className="h-4 w-4" />
+                  <span>Contact</span>
+                </Link>
               </nav>
             </div>
 
@@ -82,7 +76,7 @@ const Footer = () => {
                   </a>
                 </Button>
                 <Button variant="ghost" size="icon" asChild>
-                  <a href="mailto:kipkuruironoh254@gmail.com">
+                  <a href="mailto:wiz.dev.studios@gmail.com">
                     <Mail className="h-5 w-5" />
                     <span className="sr-only">Email</span>
                   </a>
@@ -115,14 +109,14 @@ const Footer = () => {
         </div>
 
         {/* Bottom Copyright */}
-        <div className="border-t py-6 text-center text-sm text-muted-foreground">
+        <div className="border-t border-border/60 py-6 text-center text-sm text-muted-foreground">
           <p>
             &copy; {currentYear}{" "}
             <a
               href="https://ronoh-portfolio-14.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-500 hover:underline"
+              className="text-primary hover:underline"
             >
               Wiz Dev Studios
             </a>

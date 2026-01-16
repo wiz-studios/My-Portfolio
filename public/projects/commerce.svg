@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Commerce project cover">
+  <defs>
+    <linearGradient id="commerce-gradient" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0D3B3B"/>
+      <stop offset="1" stop-color="#F0B429"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="#F6EEE3"/>
+  <rect x="40" y="40" width="720" height="420" rx="36" fill="url(#commerce-gradient)" opacity="0.12"/>
+  <circle cx="610" cy="150" r="90" fill="#F0B429" opacity="0.35"/>
+  <rect x="90" y="120" width="320" height="28" rx="14" fill="#0D3B3B" opacity="0.35"/>
+  <rect x="90" y="170" width="240" height="18" rx="9" fill="#0D3B3B" opacity="0.2"/>
+  <rect x="90" y="230" width="180" height="120" rx="18" fill="#0D3B3B" opacity="0.15"/>
+  <rect x="290" y="230" width="180" height="120" rx="18" fill="#0D3B3B" opacity="0.1"/>
+</svg>
